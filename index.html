@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Master Theorem Calculator</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script
+            id="MathJax-script"
+            async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+        ></script>
+    </head>
+    <body>
+        <h1>Master Theorem Calculator</h1>
+
+        <h2>\(T(n)=a*T(n/b)+O(n^c * \log^k(n))\)</h2>
+
+        <label for="a">\(a\):</label>
+        <input type="number" id="a" name="a" min="1" />
+        <br />
+
+        <label for="b">\(b\):</label>
+        <input type="number" id="b" name="b" min="1" />
+        <br />
+
+        <label for="c">\(c\):</label>
+        <input type="number" id="c" name="c" min="0" />
+        <br />
+
+        <label for="k">\(k\):</label>
+        <input type="number" id="k" name="k" min="0" value="0" />
+        <br />
+
+        <button id="calculate">Calculate</button>
+        <button id="reset">Reset</button>
+
+        <h2 id="result">Result: \(T(n)=\)</h2>
+
+        <h2>Details</h2>
+
+        <div id="details"></div>
+
+        <script src="main.js"></script>
+    </body>
+</html>

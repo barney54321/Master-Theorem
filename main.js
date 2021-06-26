@@ -89,7 +89,31 @@ calc.addEventListener("click", () => {
         masterCase = 3;
     }
 
-    result.innerHTML = "Result: \\(T(n)=" + res + "\\)";
+    var originalA = "";
+
+    if (a > 1) {
+        originalA = a + " * ";
+    }
+
+    var originalC = "n";
+
+    if (c == 0) {
+        originalC = "";
+    } else if (c != 1) {
+        originalC = "n^" + c;
+    }
+
+    var originalLog = "\\log(n)";
+
+    if (k == 0) {
+        originalLog = "";
+    } else if (k != 1) {
+        originalLog = "\\log^" + k + "(n)";
+    }
+
+    var original = originalA + "T(n/" + b + ") + O(" + originalC + originalLog + ")";
+
+    result.innerHTML = "Result: \\(T(n)=" + original + "=" + res + "\\)";
 
     if (masterCase == 1) {
         details.innerText = "Case 1";
